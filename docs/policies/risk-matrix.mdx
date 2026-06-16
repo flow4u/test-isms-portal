@@ -1,35 +1,34 @@
 ---
-title: System Risk Architecture
+title: Risk Matrix Tracking
+last_reviewed_date: 2026-06-16
+reviewer: Stefan (Compliance Lead)
 ---
 
-import masterRisks from './risks.json';
+import ReviewMetadata from '@site/src/components/ReviewMetadata';
 import FilteredTable from '@site/src/components/FilteredTable';
-import GitHistory from '@site/src/components/GitHistory';
+import masterRisks from './risks.json';
 import SharedSnippet from '../_snippets/_shared-access-control.mdx';
 
-:::info PORTAL AUDIT TRACKING
-* **Policy Version:** v2.1.0-Approved
-* **Scope Baseline:** ISO 27001:2022 / NIS 2 Art 21
-* **Audit Trail:** <GitHistory />
-:::
+<ReviewMetadata />
 
-# Enterprise Control Matrix
+# Risk Matrix Framework
 
-Below is our live infrastructure risk posture. Hover over any risk identifier string to inspect the mitigating operational criteria.
+Below is our shared infrastructure requirement track:
 
-## Active High-Impact Posture
-This configuration loads only **Open** records categorized as **High** impact from our centralized tracking file.
-
-<FilteredTable 
-  data={masterRisks} 
-  filterStatus="Open" 
-  filterImpact="High"
-  showColumns={['id', 'name', 'impact', 'status']} 
-/>
+<SharedSnippet />
 
 ---
 
-## Cross-Mapped Control Specifications
-The configuration below reuses our shared policy module to maintain consistency across different framework targets:
+## Technical Risk Ledger
 
-<SharedSnippet />
+export const columnsConfig = [
+  { key: 'id', label: 'Ticket ID', description: 'Internal tracking identifier.' },
+  { key: 'name', label: 'Threat Vector Description', description: 'The formal definition of the corporate threat surface profile.' },
+  { key: 'impact', label: 'Blast Radius', description: 'Calculated impact severity metrics.' },
+  { key: 'status', label: 'Mitigation State', description: 'Current production deployment validation signature.' }
+];
+
+<FilteredTable 
+  data={masterRisks}
+  columns={columnsConfig}
+/>

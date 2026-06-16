@@ -11,7 +11,7 @@ const config = {
   // Replace these strings with your actual organization and hosting domains
   url: 'https://flow4u.github.io',
   baseUrl: '/test-isms-portal/',
-  organizationName: 'test BV', 
+  organizationName: 'flow4u', 
   projectName: 'test-isms-portal', 
 
   // --- AUTOMATED AUDIT TRAIL GUARDRAILS ---

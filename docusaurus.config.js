@@ -9,7 +9,7 @@ const config = {
 
   // --- PRODUCTION DEPLOYMENT CONFIG CONFIGURATION ---
   // Replace these strings with your actual organization and hosting domains
-  url: 'https://stefanvanaalst.github.io',
+  url: 'https://flow4u.github.io',
   baseUrl: '/test-isms-portal/',
   organizationName: 'test BV', 
   projectName: 'test-isms-portal', 

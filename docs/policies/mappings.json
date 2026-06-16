@@ -1,0 +1,18 @@
+[
+  {
+    "risk": { "id": "Risk A", "description": "Ransomware vector on internal endpoints.", "url": "https://wiki.corp/risk-a" },
+    "control": { "id": "Control c", "description": "Deploy endpoint detection & response (EDR).", "url": "https://github.com/org/edr" }
+  },
+  {
+    "risk": { "id": "Risk A", "description": "Ransomware vector on internal endpoints.", "url": "https://wiki.corp/risk-a" },
+    "control": { "id": "Control d", "description": "Enforce isolated 24-hour backup snapshots.", "url": "https://aws.amazon.com" }
+  },
+  {
+    "risk": { "id": "Risk B", "description": "SSO bypass via legacy web application api.", "url": "https://wiki.corp/risk-b" },
+    "control": { "id": "Control c", "description": "Deploy endpoint detection & response (EDR).", "url": "https://github.com/org/edr" }
+  },
+  {
+    "risk": { "id": "Risk B", "description": "SSO bypass via legacy web application api.", "url": "https://wiki.corp/risk-b" },
+    "control": { "id": "Control e", "description": "Implement Zero Trust Network Access (ZTNA).", "url": "https://cloudflare.com" }
+  }
+]

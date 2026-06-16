@@ -1,0 +1,36 @@
+---
+title: Identity Control Architecture
+last_reviewed_date: 2026-06-16
+reviewer: Jane Doe (CISO)
+---
+
+import masterRisks from './risks.json';
+import FilteredTable from '@site/src/components/FilteredTable';
+import ReviewMetadata from '@site/src/components/ReviewMetadata';
+import GitHistory from '@site/src/components/GitHistory';
+
+<ReviewMetadata />
+
+# IAM Risk Metrics
+
+Below is our operational posture dataset. Header blocks contain structural summaries, while data cells link directly to evidence tracking points.
+
+export const identityColumns = [
+  { key: 'id', label: 'Ticket ID', description: 'Tracks the unique identifier inside our corporate Jira interface.' },
+  { key: 'name', label: 'Risk Identifier Description', description: 'The threat title mapped to the corporate risk catalog.' },
+  { key: 'impact', label: 'Severity Rating', description: 'Calculated business impact baseline classification.' },
+  { key: 'status', label: 'Verification Trace', description: 'Provides direct reference tracking to live compliance audit runs.' }
+];
+
+<FilteredTable 
+  data={masterRisks}
+  filterCategory="Identity"
+  columns={identityColumns}
+/>
+
+---
+
+### Audit Log & Verification
+For formal authorization verification mappings, use the tracking utility link below:
+
+<GitHistory />

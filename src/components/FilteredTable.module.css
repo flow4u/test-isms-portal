@@ -1,0 +1,60 @@
+.tableWrapper {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.customTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.customTable th {
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-font-color-base);
+  padding: 10px;
+  text-align: left;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  text-transform: uppercase;
+}
+
+.customTable td {
+  padding: 10px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.tooltipContainer {
+  position: relative;
+  cursor: help;
+}
+
+.cellText {
+  border-bottom: 1px dashed var(--ifm-color-primary);
+  display: inline-block;
+}
+
+.tooltipBox {
+  visibility: hidden;
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  border: 1px solid var(--ifm-color-emphasis-400);
+  padding: 10px 14px;
+  border-radius: 6px;
+  width: 280px;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.tooltipContainer:hover .tooltipBox {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(-2px);
+}

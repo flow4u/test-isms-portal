@@ -1,0 +1,23 @@
+---
+id: access-control-policy
+title: Access Control & Identity Management
+---
+
+import masterRisks from './risks.json';
+import FilteredTable from '@site/src/components/FilteredTable';
+
+# Access Control Risk Register
+
+export const accessColumns = [
+  { key: 'id', label: 'Ticket ID', description: 'Internal cryptographic reference number.' },
+  { key: 'name', label: 'Risk Element Threat', description: 'The official threat profile definition.' },
+  { key: 'impact', label: 'Severity', description: 'Calculated business operational blast radius.' },
+  { key: 'status', label: 'Mitigation Status', description: 'Active engineering lifecycle track.' }
+];
+
+<FilteredTable 
+  data={masterRisks} 
+  filterStatus="Open" 
+  filterImpact="High"
+  columns={accessColumns} 
+/>

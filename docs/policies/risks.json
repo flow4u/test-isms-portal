@@ -1,0 +1,26 @@
+[
+  { 
+    "category": "Identity",
+    "id": { "value": "R-01", "url": "https://jira.corp/browse/SEC-101" }, 
+    "name": { "value": "Ransomware on Prod Servers", "url": "https://wiki.corp/playbooks/ransomware" }, 
+    "impact": "High", 
+    "status": { "value": "Mitigated", "url": "https://github.com/your-org/actions/runs/999" },
+    "description": "Controlled via daily air-gapped snapshots and mandatory EDR runtime guards."
+  },
+  { 
+    "category": "Network",
+    "id": { "value": "R-02", "url": "https://jira.corp/browse/SEC-102" }, 
+    "name": "Unencrypted Telnet Access", 
+    "impact": "High", 
+    "status": "Open",
+    "description": "Legacy switch management uses cleartext protocols. Requires network isolation."
+  },
+  { 
+    "category": "Identity",
+    "id": { "value": "R-03", "url": "https://jira.corp/browse/SEC-103" }, 
+    "name": "SSO Bypass via Billing App", 
+    "impact": "Medium", 
+    "status": "Open",
+    "description": "Requires migration to Azure AD conditional access policies."
+  }
+]

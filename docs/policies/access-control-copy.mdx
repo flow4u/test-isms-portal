@@ -1,0 +1,28 @@
+---
+title: Technical Access Control Framework
+last_reviewed_date: 2026-06-16
+reviewer: Stefan (Compliance Lead)
+---
+
+import masterRisks from './risks.json';
+import FilteredTable from '@site/src/components/FilteredTable';
+import ReviewMetadata from '@site/src/components/ReviewMetadata';
+import GitHistory from '@site/src/components/GitHistory';
+
+<ReviewMetadata />
+
+# Access Control Risk Register
+
+export const accessColumns = [
+  { key: 'id', label: 'Ticket ID', description: 'Internal cryptographic reference number.' },
+  { key: 'name', label: 'Risk Element Threat', description: 'The official threat profile definition.' },
+  { key: 'impact', label: 'Severity', description: 'Calculated business operational blast radius.' },
+  { key: 'status', label: 'Mitigation Status', description: 'Active engineering lifecycle track.' }
+];
+
+<FilteredTable 
+  data={masterRisks} 
+  filterStatus="Open" 
+  filterImpact="High"
+  columns={accessColumns} 
+/>

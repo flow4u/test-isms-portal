@@ -1,3 +1,8 @@
+
+# Instructions
+
+[Docs-as-Code ISMS Portal: Complete Blueprint & Operations Manual](https://docs.google.com/document/d/1d4nRjrqVaO0VoV0TdUqlHuMc31U4INRr_5FGC-NSVxM/edit?tab=t.hnnct580jx4n)
+
 # Website
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.

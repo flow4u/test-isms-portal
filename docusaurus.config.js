@@ -2,7 +2,6 @@
 import { themes as githubThemes } from 'prism-react-renderer';
 
 // ─── CENTRALIZED COMPLIANCE CONFIGURATION VARIABLES ───
-// Change these two values to re-route your entire portal architecture automatically!
 const GITHUB_ORG = 'flow4u';
 const GITHUB_REPO = 'test-isms-portal';
 
@@ -12,7 +11,7 @@ const config = {
   tagline: 'Docs-as-Code ISMS Portal',
   favicon: 'img/favicon.ico',
 
-  // Dynamic Routing Engines
+  // Dynamic Routing Engines using clean template literals
   url: `https://${GITHUB_ORG}.github.io`,
   baseUrl: `/${GITHUB_REPO}/`,
   organizationName: GITHUB_ORG,
@@ -40,8 +39,7 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Dynamically constructs your visual "Edit this page" link
-          editUrl: `https://github.com/` + GITHUB_ORG + `/` + GITHUB_REPO + `/edit/main/`,
+          editUrl: `https://github.com/${GITHUB_ORG}/${GITHUB_REPO}/edit/main/`,
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
@@ -55,4 +53,33 @@ const config = {
 
   plugins: ['docusaurus-lunr-search'],
 
-  // ... keep the rest of your file's existing themeConfig/prism values below unchanged
+  themeConfig:
+    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    ({
+      navbar: {
+        title: 'Compliance Portal',
+        items: [
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'Policies & Controls',
+          },
+          {
+            href: `https://github.com/${GITHUB_ORG}/${GITHUB_REPO}`,
+            label: 'GitHub Repo',
+            position: 'right',
+          },
+        ],
+      },
+      footer: {
+        style: 'dark',
+        copyright: `Copyright © ${new Date().getFullYear()} Corporate ISMS. Built securely with Docusaurus.`,
+      },
+      prism: {
+        theme: githubThemes.github,
+      },
+    }),
+};
+
+export default config;

@@ -11,7 +11,6 @@ const config = {
   tagline: 'Docs-as-Code ISMS Portal',
   favicon: 'img/favicon.ico',
 
-  // Dynamic Routing Engines using clean template literals
   url: `https://${GITHUB_ORG}.github.io`,
   baseUrl: `/${GITHUB_REPO}/`,
   organizationName: GITHUB_ORG,
@@ -56,6 +55,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // 🌟 CENTRAL THEME MECHANICS (DEFAULT TO DARK)
+      colorMode: {
+        defaultMode: 'dark',               // Initial landing layout state is Dark
+        disableSwitch: false,             // Displays the interactive moon/sun toggle button in navbar
+        respectPrefersColorScheme: false, // Forces our default setting over individual browser settings
+      },
       navbar: {
         title: 'Compliance Portal',
         items: [
